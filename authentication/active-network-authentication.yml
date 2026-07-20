@@ -1,0 +1,25 @@
+generated: '2026-07-17'
+method: searched
+source: openapi/active-network-activity-search-openapi.yml, openapi/active-network-campground-search-openapi.yml
+docs: https://developer.active.com/docs/read/Activity_APIs
+notes: >-
+  ACTIVE Network's public data APIs are read-only and, per the developer docs,
+  require no SSL or OAuth. Access is authenticated with a single API key passed
+  as the api_key query parameter, obtained by registering for a key at
+  https://developer.active.com/member/register.
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - query
+schemes:
+- name: ApiKeyQuery
+  type: apiKey
+  in: query
+  parameter: api_key
+  description: API key passed as the api_key query parameter. Keys are issued via developer
+    registration and are read-only.
+  registration: https://developer.active.com/member/register
+  sources:
+  - openapi/active-network-activity-search-openapi.yml
+  - openapi/active-network-campground-search-openapi.yml
