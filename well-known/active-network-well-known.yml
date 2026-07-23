@@ -1,0 +1,30 @@
+generated: '2026-07-17'
+method: probed
+source: direct probe of provider hosts
+notes: >-
+  No /.well-known/ documents were served by any ACTIVE Network host. The API
+  host api.amp.active.com returned connection errors (596) and developer.active.com
+  returned 403 for all probed paths; web hosts returned 404. Absence recorded as
+  honest, expected data.
+probes:
+- host: developer.active.com
+  paths:
+  - { path: /.well-known/security.txt, status: 403, file: null }
+  - { path: /.well-known/openid-configuration, status: 403, file: null }
+  - { path: /.well-known/oauth-authorization-server, status: 403, file: null }
+  - { path: /.well-known/api-catalog, status: 403, file: null }
+  - { path: /.well-known/ai-plugin.json, status: 403, file: null }
+- host: www.activenetwork.com
+  paths:
+  - { path: /.well-known/security.txt, status: 404, file: null }
+  - { path: /.well-known/openid-configuration, status: 404, file: null }
+  - { path: /.well-known/oauth-authorization-server, status: 404, file: null }
+  - { path: /.well-known/api-catalog, status: 404, file: null }
+  - { path: /.well-known/ai-plugin.json, status: 404, file: null }
+- host: api.amp.active.com
+  paths:
+  - { path: /.well-known/security.txt, status: 596, file: null }
+  - { path: /.well-known/openid-configuration, status: 596, file: null }
+  - { path: /.well-known/oauth-authorization-server, status: 596, file: null }
+  - { path: /.well-known/api-catalog, status: 596, file: null }
+  - { path: /.well-known/ai-plugin.json, status: 596, file: null }

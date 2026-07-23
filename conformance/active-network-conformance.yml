@@ -1,0 +1,23 @@
+generated: '2026-07-17'
+method: derived
+source: openapi/active-network-activity-search-openapi.yml, https://developer.active.com/docs/read/v2_Activity_API_Search
+notes: Cross-cutting standards asserted from the OpenAPI specs and developer docs.
+standards:
+- id: rest
+  conforms: true
+  evidence: Resource-oriented HTTP GET endpoints over api.amp.active.com.
+- id: json
+  conforms: true
+  evidence: Activity Search API v2 returns application/json responses.
+- id: pagination
+  conforms: true
+  evidence: Page-number pagination via current_page/per_page with total_results/items_per_page/start_index.
+- id: oauth2
+  conforms: false
+  evidence: Docs state no OAuth; APIs use an api_key query parameter only.
+- id: rfc9457
+  conforms: false
+  evidence: Errors returned as HTTP status codes, not application/problem+json.
+- id: idempotency
+  conforms: false
+  evidence: Read-only GET APIs; no idempotency-key mechanism documented.

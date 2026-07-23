@@ -1,0 +1,33 @@
+generated: '2026-07-17'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.activenetwork.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 12 10:03:21 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: developer.active.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Feb  4 23:59:59 2027 GMT
+  hsts: false
+- host: api.amp.active.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Feb  4 23:59:59 2027 GMT
+  hsts: null
+domains:
+- domain: activenetwork.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: reject
+- domain: active.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: reject

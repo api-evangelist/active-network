@@ -1,0 +1,21 @@
+# generated: '2026-07-17'
+# method: generated
+# source: openapi/active-network-campground-search-openapi.yml
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for ACTIVE Network Campground Search API
+  version: 1.0.0
+extends: ../openapi/active-network-campground-search-openapi.yml
+actions:
+- target: $.info
+  update:
+    x-api-evangelist:
+      enriched: '2026-07-17'
+      authentication: authentication/active-network-authentication.yml
+      rate_limits: rate-limits/active-network-rate-limits.yml
+- target: $.paths['/camping/campgrounds'].get
+  update:
+    x-rate-limit:
+      throttle: 2 calls per second
+      quota: 5000 calls per day
+    x-response-format: application/xml

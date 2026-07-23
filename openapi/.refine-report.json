@@ -1,0 +1,16 @@
+{
+  "provider": "active-network",
+  "sources": [
+    "active-network-activities-api-openapi.yml",
+    "active-network-camping-api-openapi.yml"
+  ],
+  "outputs": [
+    "active-network-activities-api-openapi.yml",
+    "active-network-camping-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

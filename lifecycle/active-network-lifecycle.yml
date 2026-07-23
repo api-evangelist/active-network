@@ -1,0 +1,21 @@
+generated: '2026-07-17'
+method: derived
+source: https://developer.active.com/docs/Home, openapi/active-network-activity-search-openapi.yml
+notes: >-
+  Derived from ACTIVE Network's developer documentation and OpenAPI versioning.
+  No formal deprecation policy, Sunset/Deprecation headers, SLA, or public status
+  page were found during enrichment; absence recorded as honest data.
+versioning:
+  style: path-segment
+  current:
+  - Activity Search API v2 (/v2/search)
+  - Campground Search API (/camping/campgrounds)
+  observed_versions:
+  - v2
+deprecation_policy:
+  documented: false
+  sunset_headers: false
+status_page:
+  found: false
+sla:
+  documented: false

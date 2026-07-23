@@ -1,0 +1,22 @@
+generated: '2026-07-17'
+method: derived
+source: openapi/active-network-activity-search-openapi.yml, https://developer.active.com/docs/read/v2_Activity_API_Search
+format: legacy
+notes: >-
+  ACTIVE Network's public data APIs do not use RFC 9457 problem+json. Errors are
+  surfaced as HTTP status codes with a short message. The documented error
+  conditions below are derived from the rate-limit reference and the OpenAPI 403
+  responses; ACTIVE Network does not publish a formal error-code catalog.
+problem_types:
+- status: 403
+  title: Over Queries Per Second Limit
+  detail: The request exceeded the documented per-second throttle rate (2 calls per second).
+  remediation: Slow the request rate to stay within 2 calls per second.
+- status: 403
+  title: Over Rate Limit
+  detail: The request exceeded the documented daily quota for the API key.
+  remediation: Wait for the daily quota window to reset or request a higher quota.
+- status: 403
+  title: Invalid or inactive API key
+  detail: The api_key query parameter was missing, invalid, or not activated.
+  remediation: Register for and supply a valid api_key at https://developer.active.com/member/register.

@@ -1,0 +1,9 @@
+generated: '2026-07-17'
+method: searched
+source: developer.active.com, npm/PyPI/Maven/NuGet/RubyGems registry checks
+notes: >-
+  No first-party ACTIVE Network client SDKs or CLIs were found on the developer
+  portal or common package registries during enrichment. ACTIVE Network documents
+  direct HTTP access with an api_key query parameter and an interactive io-docs
+  console rather than shipping official client libraries.
+packages: []

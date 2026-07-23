@@ -1,0 +1,9 @@
+generated: '2026-07-17'
+method: generated
+source: openapi/active-network-activity-search-openapi.yml
+skills:
+- name: active-network-activity-search
+  file: active-network-activity-search.md
+  api: ACTIVE Network Activity Search API v2
+  operations:
+  - searchActivities

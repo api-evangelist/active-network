@@ -1,0 +1,38 @@
+generated: '2026-07-17'
+method: derived
+source: openapi/active-network-activity-search-openapi.yml, https://developer.active.com/docs/read/v2_Activity_API_Search
+notes: Cross-cutting API semantics derived from the OpenAPI specs and ACTIVE Network developer docs.
+authentication:
+  style: api_key query parameter
+  parameter: api_key
+  transport: query string
+  see: authentication/active-network-authentication.yml
+idempotency:
+  supported: false
+  reason: All published APIs are read-only HTTP GET requests; no write/idempotency semantics.
+pagination:
+  style: page-number
+  params:
+  - current_page (default 1)
+  - per_page (default 10)
+  response_fields:
+  - total_results
+  - items_per_page
+  - start_index
+rate_limiting:
+  signaling: HTTP 403 on exceeding per-second throttle or daily quota
+  see: rate-limits/active-network-rate-limits.yml
+versioning:
+  style: path-segment
+  example: /v2/search
+  see: lifecycle/active-network-lifecycle.yml
+error_envelope:
+  activity_search: JSON; errors surfaced as HTTP status (403) with a message
+  campground_search: XML responses
+  see: errors/active-network-problem-types.yml
+response_formats:
+- application/json (Activity Search API v2)
+- application/xml (Campground Search API)
+jsonp:
+  supported: true
+  param: cb

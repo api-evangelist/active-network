@@ -1,0 +1,21 @@
+generated: '2026-07-17'
+method: searched
+source: https://developer.active.com/docs/read/v2_Activity_API_Search
+docs: https://developer.active.com/docs/read/Activity_APIs
+notes: >-
+  Rate limits published in the ACTIVE Network developer documentation. All public
+  data APIs are throttled per second and capped by a daily quota; exceeding either
+  returns an HTTP 403 (Over Queries Per Second Limit / Over Rate Limit).
+rate_limits:
+- api: ACTIVE Network Activity Search API v2
+  throttle_rate: 2 calls per second
+  quota_limit: 500000 calls per day
+  limit_count: 500000
+  window: day
+  enforcement: HTTP 403 on exceeding per-second throttle or daily quota
+- api: ACTIVE Network Campground Search API
+  throttle_rate: 2 calls per second
+  quota_limit: 5000 calls per day
+  limit_count: 5000
+  window: day
+  enforcement: HTTP 403 on exceeding per-second throttle or daily quota

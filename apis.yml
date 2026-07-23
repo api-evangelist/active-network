@@ -1,8 +1,28 @@
 aid: active-network
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/active-network.png
 name: Active Network
-description: Active Network is a company surfaced as a portfolio company of canaan-partners, sierra-ventures
-  and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the
-  enrichment pipeline.
+description: >-
+  ACTIVE Network provides intelligent activity and event management software for
+  communities and organizations, powering registration, payments, marketing, and
+  attendance for recreation departments, YMCAs, camps, schools, event organizers,
+  and municipalities, and is trusted by over 6,300 organizations worldwide. For
+  developers, ACTIVE Network publishes a set of read-only public data APIs on its
+  AMP platform (api.amp.active.com): the Activity Search API v2 surfaces
+  searchable activities and events from ACTIVE.com and ACTIVEkids.com, and the
+  Campground / Campsite Search APIs surface campgrounds and campsites. All APIs
+  are authenticated with a simple api_key query parameter and are rate limited.
 url: https://raw.githubusercontent.com/api-evangelist/active-network/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -16,12 +36,89 @@ created: '2026-07-17'
 modified: '2026-07-17'
 tags:
 - Company
-apis: []
+- Events
+- Registration
+- Recreation
+- Activities
+- Sports
+- Camping
+- Search
+- Ticketing
+apis:
+- aid: active-network:active-network-activities-api
+  name: Active Network Activities API
+  description: The Activities API from Active Network — 1 operation(s) for activities.
+  humanURL: https://developer.active.com/docs/read/v2_Activity_API_Search
+  baseURL: http://api.amp.active.com
+  tags:
+  - Activities
+  properties:
+  - type: OpenAPI
+    url: openapi/active-network-activities-api-openapi.yml
+- aid: active-network:active-network-camping-api
+  name: Active Network Camping API
+  description: The Camping API from Active Network — 1 operation(s) for camping.
+  humanURL: https://developer.active.com/docs/read/v2_Activity_API_Search
+  baseURL: http://api.amp.active.com
+  tags:
+  - Camping
+  properties:
+  - type: OpenAPI
+    url: openapi/active-network-camping-api-openapi.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/active-network-domain-security.yml
 - type: Website
-  url: https://activenetwork.com/
+  url: https://www.activenetwork.com/
+- type: DeveloperPortal
+  url: https://developer.active.com/
+- type: Documentation
+  url: https://developer.active.com/docs/Home
+- type: APIReference
+  url: https://developer.active.com/apis
+- type: GettingStarted
+  url: https://developer.active.com/member/register
+- type: SignUp
+  url: https://developer.active.com/member/register
+- type: Support
+  url: https://developer.active.com/help_center
+- type: HelpCenter
+  url: https://www.activenetwork.com/support
+- type: Blog
+  url: https://www.activenetwork.com/blog
+- type: TermsOfService
+  url: https://www.activenetwork.com/information/products-services-terms
+- type: PrivacyPolicy
+  url: https://www.activenetwork.com/information/privacy-policy
+- type: Authentication
+  url: authentication/active-network-authentication.yml
+- type: RateLimits
+  url: rate-limits/active-network-rate-limits.yml
+- type: Conventions
+  url: conventions/active-network-conventions.yml
+- type: ErrorCatalog
+  url: errors/active-network-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/active-network-lifecycle.yml
+- type: Conformance
+  url: conformance/active-network-conformance.yml
+- type: WellKnown
+  url: well-known/active-network-well-known.yml
+- type: MCPServer
+  url: mcp/active-network-mcp.yml
+- type: LLMsTxt
+  url: llms/active-network-llms.txt
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Overlay
+  url: overlays/active-network-activity-search-overlay.yaml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
