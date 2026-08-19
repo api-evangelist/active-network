@@ -2,10 +2,9 @@ generated: '2026-07-17'
 method: derived
 source: openapi/active-network-activity-search-openapi.yml, openapi/active-network-campground-search-openapi.yml
 status: candidate
-notes: >-
-  No official hosted or remote ACTIVE Network MCP server was found. This is a
-  candidate tool list derived from the documented OpenAPI operations for a
-  potential MCP server wrapping ACTIVE Network's public data APIs.
+notes: No official hosted or remote ACTIVE Network MCP server was found. This is a candidate tool list
+  derived from the documented OpenAPI operations for a potential MCP server wrapping ACTIVE Network's
+  public data APIs.
 tools:
 - name: search_activities
   operationId: searchActivities
@@ -15,3 +14,9 @@ tools:
   operationId: searchCampgrounds
   api: ACTIVE Network Campground Search API
   description: Search campgrounds and campsites by state, park, site type, amenities, and radius.
+deployment:
+  mode: none
+  verified: derived
+  tools: 2
+  checked: '2026-08-12'
+  source: catalog MCP census

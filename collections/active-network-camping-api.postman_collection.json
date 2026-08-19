@@ -1,0 +1,386 @@
+{
+  "item": [
+    {
+      "id": "b8482e75-9e2c-41a7-b284-d4c9484e7ba6",
+      "name": "Camping",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6f198df1-69e0-4c2e-a045-e1e690b1c46a",
+          "name": "Search campgrounds",
+          "request": {
+            "name": "Search campgrounds",
+            "description": {
+              "content": "Search campgrounds by state, park name, site type, amenities, hookup requirements, and landmark radius. Returns an XML list of facilities with amenity indicators.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "camping",
+                "campgrounds"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "<string>",
+                  "description": "(Required) API key obtained via developer registration."
+                },
+                {
+                  "disabled": false,
+                  "key": "pstate",
+                  "value": "<string>",
+                  "description": "2-character US state or Canadian province code."
+                },
+                {
+                  "disabled": false,
+                  "key": "pname",
+                  "value": "<string>",
+                  "description": "Park name search string (for example \"ASPEN\")."
+                },
+                {
+                  "disabled": false,
+                  "key": "siteType",
+                  "value": "<integer>",
+                  "description": "Accommodation type code (2001 RV, 10001 Cabin, 2003 Tent, 2002 Trailer, 9002 Group, 9001 Day Use, 3001 Horse, 2004 Boat)."
+                },
+                {
+                  "disabled": false,
+                  "key": "amenity",
+                  "value": "<integer>",
+                  "description": "Recreation activity code (4001 Biking, 4004 Fishing, 4005 Golf, 4006 Hiking, 4007 Horseback, 4008 Hunting, 4013 Winter)."
+                },
+                {
+                  "disabled": false,
+                  "key": "eqplen",
+                  "value": "<integer>",
+                  "description": "RV length in feet."
+                },
+                {
+                  "disabled": false,
+                  "key": "maxpeople",
+                  "value": "<integer>",
+                  "description": "Occupancy limit."
+                },
+                {
+                  "disabled": false,
+                  "key": "hookup",
+                  "value": "<integer>",
+                  "description": "Electric hookup code (3002 15A+, 3003 20A+, 3004 30A+, 3005 50A+)."
+                },
+                {
+                  "disabled": false,
+                  "key": "water",
+                  "value": "<integer>",
+                  "description": "Water hookup code (3006 or 3007)."
+                },
+                {
+                  "disabled": false,
+                  "key": "sewer",
+                  "value": "<integer>",
+                  "description": "Sewer hookup code (3007)."
+                },
+                {
+                  "disabled": false,
+                  "key": "pull",
+                  "value": "<integer>",
+                  "description": "Pull-through driveway code (3008)."
+                },
+                {
+                  "disabled": false,
+                  "key": "pets",
+                  "value": "<integer>",
+                  "description": "Pet-friendly code (3010)."
+                },
+                {
+                  "disabled": false,
+                  "key": "waterfront",
+                  "value": "<integer>",
+                  "description": "Waterfront sites code (3011)."
+                },
+                {
+                  "disabled": false,
+                  "key": "landmarkLat",
+                  "value": "<number>",
+                  "description": "Latitude for a 200-mile radius geographic search."
+                },
+                {
+                  "disabled": false,
+                  "key": "landmarkLong",
+                  "value": "<number>",
+                  "description": "Longitude for a 200-mile radius geographic search."
+                },
+                {
+                  "disabled": false,
+                  "key": "landmarkName",
+                  "value": "<string>",
+                  "description": "Set to \"true\" when providing landmark coordinates."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "19e9755e-aac3-4008-b136-6edc244d1be7",
+              "name": "An XML list of matching campground facilities.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "camping",
+                    "campgrounds"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "pstate",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "pname",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "siteType",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "amenity",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "eqplen",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "maxpeople",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "hookup",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "water",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sewer",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "pull",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "pets",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "waterfront",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "landmarkLat",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "landmarkLong",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "landmarkName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/xml"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/xml"
+                }
+              ],
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n</element>",
+              "cookie": [],
+              "_postman_previewlanguage": "xml"
+            },
+            {
+              "id": "1251d766-3a06-4c5d-ab89-fccf16120641",
+              "name": "Request rejected for exceeding the queries-per-second limit or the daily quota, or for an invalid/inactive API key.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "camping",
+                    "campgrounds"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "pstate",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "pname",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "siteType",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "amenity",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "eqplen",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "maxpeople",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "hookup",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "water",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sewer",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "pull",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "pets",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "waterfront",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "landmarkLat",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "landmarkLong",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "landmarkName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://api.amp.active.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "c07cb5c7-834a-45bd-a87e-5c95db011c0e",
+    "name": "ACTIVE Network Activity Search API v2 Activities Camping API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The ACTIVE Network Activity Search API v2 returns publicly searchable activities and events (races, camps, classes, tournaments, and other registerable assets) from ACTIVE.com and ACTIVEkids.com. All endpoints are read-only, return public data, and are authenticated with an API key passed as the api_key query parameter. Generated by the API Evangelist enrichment pipeline from ACTIVE Network's published developer documentation; not an official ACTIVE Network artifact.\n\nContact Support:\n Name: ACTIVE Network Developer Support",
+      "type": "text/plain"
+    }
+  }
+}

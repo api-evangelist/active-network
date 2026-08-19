@@ -1,0 +1,503 @@
+{
+  "item": [
+    {
+      "id": "fe334935-ac23-4e4b-ac61-96195906484b",
+      "name": "Activities",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7b4395d6-b81a-43ac-bb2c-5df5d9c69b5f",
+          "name": "Search activities and events",
+          "request": {
+            "name": "Search activities and events",
+            "description": {
+              "content": "Search ACTIVE Network's public catalog of activities and events by keyword, location, category, topic, and date range. Returns a paginated JSON list of assets with facets and suggestions.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v2",
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api_key",
+                  "value": "<string>",
+                  "description": "(Required) Search API key obtained via developer registration."
+                },
+                {
+                  "disabled": false,
+                  "key": "query",
+                  "value": "<string>",
+                  "description": "Free-text search term (for example \"running\")."
+                },
+                {
+                  "disabled": false,
+                  "key": "near",
+                  "value": "<string>",
+                  "description": "A place name that can be geocoded (for example \"San Diego,CA,US\")."
+                },
+                {
+                  "disabled": false,
+                  "key": "lat_lon",
+                  "value": "<string>",
+                  "description": "Latitude and longitude separated by a comma."
+                },
+                {
+                  "disabled": false,
+                  "key": "bbox",
+                  "value": "<string>",
+                  "description": "Bounding box with NW and SE corners separated by a semicolon."
+                },
+                {
+                  "disabled": false,
+                  "key": "radius",
+                  "value": "<integer>",
+                  "description": "Search radius in miles."
+                },
+                {
+                  "disabled": false,
+                  "key": "city",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "state",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "zip",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "country",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "category",
+                  "value": "<string>",
+                  "description": "Filter by category (for example \"event\", \"articles\")."
+                },
+                {
+                  "disabled": false,
+                  "key": "topic",
+                  "value": "<string>",
+                  "description": "Filter by topic name (for example \"running\")."
+                },
+                {
+                  "disabled": false,
+                  "key": "start_date",
+                  "value": "<string>",
+                  "description": "Date range filter (format yyyy-mm-dd..yyyy-mm-dd)."
+                },
+                {
+                  "disabled": false,
+                  "key": "end_date",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "current_page",
+                  "value": "1",
+                  "description": "Page number for pagination (defaults to 1)."
+                },
+                {
+                  "disabled": false,
+                  "key": "per_page",
+                  "value": "10",
+                  "description": "Results per page (defaults to 10)."
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>",
+                  "description": "Sort order (date_asc, date_desc, or distance)."
+                },
+                {
+                  "disabled": false,
+                  "key": "kids",
+                  "value": "<string>",
+                  "description": "Return assets from ACTIVEkids.com."
+                },
+                {
+                  "disabled": false,
+                  "key": "cb",
+                  "value": "<string>",
+                  "description": "JSONP callback parameter."
+                },
+                {
+                  "disabled": false,
+                  "key": "exclude_children",
+                  "value": "<string>",
+                  "description": "Remove children assets (\"true\" or \"false\")."
+                },
+                {
+                  "disabled": false,
+                  "key": "registerable_only",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "show_distance",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "facets",
+                  "value": "<string>",
+                  "description": "Comma-delimited facet counts to return."
+                },
+                {
+                  "disabled": false,
+                  "key": "attributes",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "tags",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "67d1d8e8-a691-4863-b22a-8b37d3dae920",
+              "name": "A paginated set of matching activities.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "query",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "near",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lat_lon",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "bbox",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "radius",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "city",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "state",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "zip",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "country",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "category",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "topic",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "start_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "end_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "current_page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "10"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "kids",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "cb",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "exclude_children",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "registerable_only",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "show_distance",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "facets",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "attributes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "tags",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"total_results\": 4173,\n  \"items_per_page\": 1577,\n  \"start_index\": 7677,\n  \"results\": [\n    {\n      \"assetName\": \"string\",\n      \"activityStartDate\": \"string\",\n      \"place\": {}\n    },\n    {\n      \"assetName\": \"string\",\n      \"activityStartDate\": \"string\",\n      \"place\": {}\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2b5559ec-fb27-424d-947d-ad0c85003f78",
+              "name": "Request rejected for exceeding the queries-per-second limit or the daily quota, or for an invalid/inactive API key.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v2",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "query",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "near",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lat_lon",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "bbox",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "radius",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "city",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "state",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "zip",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "country",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "category",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "topic",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "start_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "end_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "current_page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "per_page",
+                      "value": "10"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "kids",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "cb",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "exclude_children",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "registerable_only",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "show_distance",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "facets",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "attributes",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "tags",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://api.amp.active.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "a1d522d5-8aa8-4c09-b24b-4efbc10c19ee",
+    "name": "ACTIVE Network Activity Search API v2 Activities API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The ACTIVE Network Activity Search API v2 returns publicly searchable activities and events (races, camps, classes, tournaments, and other registerable assets) from ACTIVE.com and ACTIVEkids.com. All endpoints are read-only, return public data, and are authenticated with an API key passed as the api_key query parameter. Generated by the API Evangelist enrichment pipeline from ACTIVE Network's published developer documentation; not an official ACTIVE Network artifact.\n\nContact Support:\n Name: ACTIVE Network Developer Support",
+      "type": "text/plain"
+    }
+  }
+}

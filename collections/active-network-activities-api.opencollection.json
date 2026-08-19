@@ -1,0 +1,180 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "ACTIVE Network Activity Search API v2 Activities API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Activities",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search activities and events",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://api.amp.active.com/v2/search",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query",
+                "description": "Search API key obtained via developer registration."
+              },
+              {
+                "name": "query",
+                "value": "",
+                "type": "query",
+                "description": "Free-text search term (for example \"running\")."
+              },
+              {
+                "name": "near",
+                "value": "",
+                "type": "query",
+                "description": "A place name that can be geocoded (for example \"San Diego,CA,US\")."
+              },
+              {
+                "name": "lat_lon",
+                "value": "",
+                "type": "query",
+                "description": "Latitude and longitude separated by a comma."
+              },
+              {
+                "name": "bbox",
+                "value": "",
+                "type": "query",
+                "description": "Bounding box with NW and SE corners separated by a semicolon."
+              },
+              {
+                "name": "radius",
+                "value": "",
+                "type": "query",
+                "description": "Search radius in miles."
+              },
+              {
+                "name": "city",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "state",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "zip",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "country",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "category",
+                "value": "",
+                "type": "query",
+                "description": "Filter by category (for example \"event\", \"articles\")."
+              },
+              {
+                "name": "topic",
+                "value": "",
+                "type": "query",
+                "description": "Filter by topic name (for example \"running\")."
+              },
+              {
+                "name": "start_date",
+                "value": "",
+                "type": "query",
+                "description": "Date range filter (format yyyy-mm-dd..yyyy-mm-dd)."
+              },
+              {
+                "name": "end_date",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "current_page",
+                "value": "",
+                "type": "query",
+                "description": "Page number for pagination (defaults to 1)."
+              },
+              {
+                "name": "per_page",
+                "value": "",
+                "type": "query",
+                "description": "Results per page (defaults to 10)."
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query",
+                "description": "Sort order (date_asc, date_desc, or distance)."
+              },
+              {
+                "name": "kids",
+                "value": "",
+                "type": "query",
+                "description": "Return assets from ACTIVEkids.com."
+              },
+              {
+                "name": "cb",
+                "value": "",
+                "type": "query",
+                "description": "JSONP callback parameter."
+              },
+              {
+                "name": "exclude_children",
+                "value": "",
+                "type": "query",
+                "description": "Remove children assets (\"true\" or \"false\")."
+              },
+              {
+                "name": "registerable_only",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "show_distance",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "facets",
+                "value": "",
+                "type": "query",
+                "description": "Comma-delimited facet counts to return."
+              },
+              {
+                "name": "attributes",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "tags",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Search ACTIVE Network's public catalog of activities and events by keyword, location, category, topic, and date range. Returns a paginated JSON list of assets with facets and suggestions."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,135 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "ACTIVE Network Activity Search API v2 Activities Camping API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Camping",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search campgrounds",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://api.amp.active.com/camping/campgrounds",
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query",
+                "description": "API key obtained via developer registration."
+              },
+              {
+                "name": "pstate",
+                "value": "",
+                "type": "query",
+                "description": "2-character US state or Canadian province code."
+              },
+              {
+                "name": "pname",
+                "value": "",
+                "type": "query",
+                "description": "Park name search string (for example \"ASPEN\")."
+              },
+              {
+                "name": "siteType",
+                "value": "",
+                "type": "query",
+                "description": "Accommodation type code (2001 RV, 10001 Cabin, 2003 Tent, 2002 Trailer, 9002 Group, 9001 Day Use, 3001 Horse, 2004 Boat)."
+              },
+              {
+                "name": "amenity",
+                "value": "",
+                "type": "query",
+                "description": "Recreation activity code (4001 Biking, 4004 Fishing, 4005 Golf, 4006 Hiking, 4007 Horseback, 4008 Hunting, 4013 Winter)."
+              },
+              {
+                "name": "eqplen",
+                "value": "",
+                "type": "query",
+                "description": "RV length in feet."
+              },
+              {
+                "name": "maxpeople",
+                "value": "",
+                "type": "query",
+                "description": "Occupancy limit."
+              },
+              {
+                "name": "hookup",
+                "value": "",
+                "type": "query",
+                "description": "Electric hookup code (3002 15A+, 3003 20A+, 3004 30A+, 3005 50A+)."
+              },
+              {
+                "name": "water",
+                "value": "",
+                "type": "query",
+                "description": "Water hookup code (3006 or 3007)."
+              },
+              {
+                "name": "sewer",
+                "value": "",
+                "type": "query",
+                "description": "Sewer hookup code (3007)."
+              },
+              {
+                "name": "pull",
+                "value": "",
+                "type": "query",
+                "description": "Pull-through driveway code (3008)."
+              },
+              {
+                "name": "pets",
+                "value": "",
+                "type": "query",
+                "description": "Pet-friendly code (3010)."
+              },
+              {
+                "name": "waterfront",
+                "value": "",
+                "type": "query",
+                "description": "Waterfront sites code (3011)."
+              },
+              {
+                "name": "landmarkLat",
+                "value": "",
+                "type": "query",
+                "description": "Latitude for a 200-mile radius geographic search."
+              },
+              {
+                "name": "landmarkLong",
+                "value": "",
+                "type": "query",
+                "description": "Longitude for a 200-mile radius geographic search."
+              },
+              {
+                "name": "landmarkName",
+                "value": "",
+                "type": "query",
+                "description": "Set to \"true\" when providing landmark coordinates."
+              }
+            ]
+          },
+          "docs": "Search campgrounds by state, park name, site type, amenities, hookup requirements, and landmark radius. Returns an XML list of facilities with amenity indicators."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
