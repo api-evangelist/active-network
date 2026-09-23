@@ -1,8 +1,8 @@
 {
   "provider": "active-network",
   "sources": [
-    "active-network-activities-api-openapi.yml",
-    "active-network-camping-api-openapi.yml"
+    "_original/active-network-activity-search-openapi.yml",
+    "_original/active-network-campground-search-openapi.yml"
   ],
   "outputs": [
     "active-network-activities-api-openapi.yml",
@@ -11,6 +11,16 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (2 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "active-network-activity-search-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "active-network-activity-search-openapi.yml: declared missing tag: Activities",
+    "active-network-campground-search-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "active-network-campground-search-openapi.yml: declared missing tag: Camping",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "active-network-activities-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "active-network-camping-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
