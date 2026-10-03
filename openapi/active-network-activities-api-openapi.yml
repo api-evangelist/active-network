@@ -181,6 +181,19 @@ paths:
           description: Request rejected for exceeding the queries-per-second limit or the daily quota, or for an invalid/inactive API key.
 components:
   schemas:
+    Asset:
+      type: object
+      properties:
+        assetName:
+          type: string
+        activityStartDate:
+          type: string
+        place:
+          type: object
+        assetPrices:
+          type: array
+          items:
+            type: object
     SearchResponse:
       type: object
       properties:
@@ -199,19 +212,6 @@ components:
           items:
             type: object
         suggestions:
-          type: array
-          items:
-            type: object
-    Asset:
-      type: object
-      properties:
-        assetName:
-          type: string
-        activityStartDate:
-          type: string
-        place:
-          type: object
-        assetPrices:
           type: array
           items:
             type: object
