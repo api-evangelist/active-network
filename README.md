@@ -122,6 +122,7 @@ Links to the company's own pages. This repository publishes no copy of their spe
 - [Documentation](https://developer.active.com/docs/Home)
 - [Getting started](https://developer.active.com/member/register)
 - [API reference](https://developer.active.com/apis)
+- [Pricing](https://www.activenetwork.com/activeworks-endurance/plans-pricing)
 - [Sign up](https://developer.active.com/member/register)
 - [Support](https://developer.active.com/help_center)
 - [Blog](https://www.activenetwork.com/blog)
@@ -130,7 +131,7 @@ Links to the company's own pages. This repository publishes no copy of their spe
 
 ## API Evangelist rating
 
-**Kin Score 43.0** — developing · rubric 0.24.0 · scored 2026-10-17
+**Kin Score 43.0** — developing · rubric 0.25.0 · scored 2026-10-23
 
 | Facet | Score |
 |---|---|
@@ -141,7 +142,7 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | Developer ergonomics | 58.9 |
 | Access clarity | 34.2 |
 
-**Agent readiness 22.7** — agent-aware
+**Agent readiness 25.8** — agent-aware
 
 | Agent-readiness dimension | Result |
 |---|---|
@@ -164,6 +165,8 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | Protected Resource Metadata | — |
 | Dynamic Client Registration | — |
 | Agentic Commerce | — |
+| Pagination Ratio | paginated |
+| Operation Distinctiveness | na |
 
 **Regulatory alignment 24.5** — Horizontal (data, software, accessibility, platform)
 
