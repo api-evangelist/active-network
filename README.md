@@ -87,6 +87,24 @@ Model Context Protocol servers that expose the API to agents.
 
 - [active-network-mcp.yml](https://apis.io/servers/active-network/active-network-mcp-yml/)
 
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Active Network Agentic Access](https://apis.io/agentic-access/active-network/active-network-agentic-access/)
+
+#### JSON Schema (1)
+
+The data models the API reads and writes.
+
+- [SearchResponse](https://apis.io/schemas/active-network/active-network-search-response/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Active Network Context](https://apis.io/jsonld/active-network/active-network-context/)
+
 #### Collections (2)
 
 Postman and Open Collection request collections.
@@ -101,6 +119,12 @@ OpenAPI overlays, including conversational phrasing for each operation.
 - [Active Network Activity Search Overlay](https://apis.io/overlays/active-network/active-network-activity-search-overlay/)
 - [Active Network Campground Search Overlay](https://apis.io/overlays/active-network/active-network-campground-search-overlay/)
 
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Active Network API Rules](https://apis.io/rules/active-network/active-network-rules/)
+
 #### Security (2)
 
 Authentication, trust centre, and vulnerability disclosure.
@@ -108,11 +132,23 @@ Authentication, trust centre, and vulnerability disclosure.
 - [Active Network Authentication](https://apis.io/security/active-network/active-network-authentication/)
 - [Active Network Domain Security](https://apis.io/security/active-network/active-network-domain-security/)
 
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Active Network Plans Pricing](https://apis.io/plans/active-network/active-network-plans-pricing/)
+
 #### Rate limits (1)
 
 Published request limits.
 
 - [Active Network Rate Limits](https://apis.io/rate-limits/active-network/active-network-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Active Network Finops](https://apis.io/finops/active-network/active-network-finops/)
 
 ## Where to find this API
 
@@ -131,23 +167,23 @@ Links to the company's own pages. This repository publishes no copy of their spe
 
 ## API Evangelist rating
 
-**Kin Score 43.0** — developing · rubric 0.25.0 · scored 2026-10-23
+**Kin Score 54.5** — strong · rubric 0.28.1 · scored 2026-11-21
 
 | Facet | Score |
 |---|---|
 | Discoverability | 73.2 |
-| Contract quality | 49.6 |
-| Contract governance | 4.5 |
-| Operational transparency | 21.1 |
+| Contract quality | 58.7 |
+| Contract governance | 22.0 |
+| Operational transparency | 33.3 |
 | Developer ergonomics | 58.9 |
-| Access clarity | 34.2 |
+| Access clarity | 66.0 |
 
-**Agent readiness 25.8** — agent-aware
+**Agent readiness 27.1** — agent-aware
 
 | Agent-readiness dimension | Result |
 |---|---|
 | Spec Presence | yes |
-| Agentic Access | — |
+| Agentic Access | derived (partial credit) |
 | Reversibility Documented | na |
 | MCP Server | — |
 | Auth Clarity | bearer (partial credit) |
@@ -167,8 +203,12 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | Agentic Commerce | — |
 | Pagination Ratio | paginated |
 | Operation Distinctiveness | na |
+| MCP Tool Quality | na |
+| Onboarding Descriptor | — |
+| Dns Aid Index | na |
+| Markdown Negotiation | na |
 
-**Regulatory alignment 24.5** — Horizontal (data, software, accessibility, platform)
+**Regulatory alignment 18.6** — Horizontal (data, software, accessibility, platform)
 
 The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/active-network/](https://apis.io/providers/active-network/).
 
